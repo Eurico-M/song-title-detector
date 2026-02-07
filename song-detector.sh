@@ -15,7 +15,7 @@ do
     #echo $WINDOWNAME
 
     # feed the name to a little program that cleans it and outputs it
-    java WindowTitleCleaner.java $WINDOWNAME
+    java WindowTitleCleaner $WINDOWNAME
 
     # wait x seconds, then do it again 
     sleep 5
