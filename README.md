@@ -1,2 +1,22 @@
-# song-title-detector
-Script to grab the window title of a browser and output it to a file (to then be read by OBS and displayed as "Playing this song...")
+# Song Title Detector
+
+## Motivation:
+
+When I'm streaming on CachyOS, I'm almost always looking at a browser window to read the chords of the song I'm playing.
+
+This little program runs in a terminal and looks at all the windows open, searching for one that has a pattern (in my case, "@ Ultimate-Guitar.com", the website I use to read chords).
+Then it ouputs this name to a java program, that cleans it and outputs it to a simple .txt file. OBS can then simply use this .txt file as a source for a text object, and display it on stream.
+
+## Requirements:
+
+- *[kdotool](https://github.com/jinliu/kdotool)*: this tool is like xdotool but for KDE-Wayland. It can search window names and do other useful stuff. You could adapt this to X11 with xdotool.
+- *java*: I'm using `jdk21-openjdk` because I'm on CachyOS, just grab whatever allows you to compile and run java.
+- *zsh*: The shell script was written for Zsh, but I'm sure it's easily adapted to Bash.
+
+## Usage:
+
+- Open a terminal in song-title-detector folder.
+- Once, before first run, compile the java program: `$ javac WindowTitleCleaner.java`
+- Everytime you want to run: `$ ./song-detector.sh` (make sure song-detector.sh has permission to execute).
+- Leave it running in the terminal window. It will search for any windows which have "@ Ultimate-Guitar.com" in the name, and output a formated "Song by Artist" type title to stream-song-title.txt. Use this text file in OBS as a text source to display the song title on stream.
+- When you want to close it, simply Ctrl+C.
