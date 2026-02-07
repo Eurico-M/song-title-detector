@@ -14,7 +14,7 @@ public class WindowTitleCleaner {
 
             String upperCaseString = sComponents[i];
             // if the first character is a letter and the component is bigger than 1
-            if (upperCaseString.charAt(0) >= 65 && upperCaseString.length() > 1) {
+            if (upperCaseString.length() > 1 && upperCaseString.charAt(0) >= 65) {
 
                 // grab the first letter as is
                 String firstLetter = upperCaseString.substring(0, 1);
@@ -27,13 +27,13 @@ public class WindowTitleCleaner {
                 output += correctFormat;
 
             }
-            // if the first letter is a number, chances are the whole component is a number
-            else if (upperCaseString.charAt(0) < 65) {
+            // single char words or numbers
+            else if (upperCaseString.length() > 0) {
                 // just add it to the final result without any changes
                 output += upperCaseString;
             }
 
-            if (i < sComponents.length - 1) {
+            if (upperCaseString.length() > 0 && i < sComponents.length - 1) {
                 // add a space to all components except the last one
                 output += " ";
             }
