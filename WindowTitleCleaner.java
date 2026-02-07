@@ -5,30 +5,36 @@ public class WindowTitleCleaner {
     // function to format THIS TITLE to This Title
     public static String capitalize(String s) {
         String output = "";
-
+        
+        // split a string into it's components by whitespace
         String[] sComponents = s.split(" ");
-
+        
+        // for each component
         for (int i = 0; i < sComponents.length; i++) {
 
             String upperCaseString = sComponents[i];
-
+            // if the first character is a letter and the component is bigger than 1
             if (upperCaseString.charAt(0) >= 65 && upperCaseString.length() > 1) {
 
+                // grab the first letter as is
                 String firstLetter = upperCaseString.substring(0, 1);
+                // grab the rest of the string and turn it into lowercase
                 String restString = upperCaseString.substring(1);
                 restString = restString.toLowerCase();
-
+                // join them again
                 String correctFormat = firstLetter + restString;
 
                 output += correctFormat;
 
             }
+            // if the first letter is a number, chances are the whole component is a number
             else if (upperCaseString.charAt(0) < 65) {
+                // just add it to the final result without any changes
                 output += upperCaseString;
             }
 
             if (i < sComponents.length - 1) {
-
+                // add a space to all components except the last one
                 output += " ";
             }
         }
@@ -55,6 +61,10 @@ public class WindowTitleCleaner {
             String outString;
             String song = "";
             String artist = "";
+
+            // Ultimate Guitar appears to have two formats:
+            // 1) SONG CHORDS by Artist
+            // 2) ARTIST - SONG
 
             if (rawName.contains("CHORDS")) {
 
