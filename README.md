@@ -7,6 +7,14 @@ When I'm streaming on CachyOS, I'm almost always looking at a browser window to 
 This little program runs in a terminal and looks at all the windows open, searching for one that has a pattern (in my case, "@ Ultimate-Guitar.com", the website I use to read chords).
 Then it ouputs this name to a java program, that cleans it and outputs it to a simple .txt file. OBS can then simply use this .txt file as a source for a text object, and display it on stream.
 
+For example, if I have a browser window open called:
+
+NUTSHELL CHORDS by Alice in Chains @ Ultimate-Guitar.com
+
+the program will update the text file (stream-song-title.txt) to:
+
+"Nutshell" by Alice in Chains
+
 ## Requirements:
 
 - *[kdotool](https://github.com/jinliu/kdotool)*: this tool is like xdotool but for KDE-Wayland. It can search window names and do other useful stuff. You could adapt this to X11 with xdotool.
