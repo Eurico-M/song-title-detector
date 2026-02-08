@@ -30,3 +30,7 @@ This tool was written to fit my workflow: I'm using CachyOS Linux, with KDE Plas
 - Everytime you want to run: `$ ./song-detector.sh` (make sure song-detector.sh has permission to execute).
 - Leave it running in the terminal window. It will search for any windows which have "@ Ultimate-Guitar.com" in the name, and output a formated "Song by Artist" type title to stream-song-title.txt. Use this text file in OBS as a text source to display the song title on stream.
 - When you want to close it, simply Ctrl+C.
+
+## If You're New to GitHub:
+
+On the top, to the left of the About section, there's a green button called Code. Click it, and you can Download ZIP. Then just unzip to get a folder called song-title-detector and follow the Usage instructions above.
