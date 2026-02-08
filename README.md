@@ -5,7 +5,7 @@
 When I'm streaming I'm almost always looking at a browser window to read the chords of the song I'm playing.
 
 This little program runs in a terminal and looks at all the windows open, searching for one that has a pattern (in my case, "@ Ultimate-Guitar.com", the website I use to read chords).
-Then it ouputs this name to a java program, that cleans it and outputs it to a simple .txt file. OBS can then simply use this .txt file as a source for a text object, and display it on stream.
+Then it ouputs this window's name to a java program, that cleans it and outputs it to a simple .txt file. OBS can then simply use this .txt file as a source for a text object, and display it on stream.
 
 For example, if I have a browser window open called:
 
