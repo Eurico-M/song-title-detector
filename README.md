@@ -34,3 +34,7 @@ This tool was written to fit my workflow: I'm using CachyOS Linux, with KDE Plas
 ## If You're New to GitHub:
 
 On the top, to the left of the About section, there's a green button called Code. Click it, and you can Download ZIP. Then just unzip to get a folder called song-title-detector and follow the Usage instructions above.
+
+### NO AI
+
+No Large Language Model (AI LLM) was used to create this.
