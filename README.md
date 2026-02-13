@@ -17,11 +17,11 @@ the program will update the text file (stream-song-title.txt) to:
 
 ## Requirements:
 
-This tool was written to fit my workflow: I'm using CachyOS Linux, with KDE Plasma 6 Wayland, and Zsh shell. And OBS to stream.
+This tool was written to fit my workflow: I'm using CachyOS Linux, with KDE Plasma 6 Wayland, and fish shell. And OBS to stream.
 
 - *[kdotool](https://github.com/jinliu/kdotool)*: this tool is like xdotool but for KDE-Wayland. It can search window names and do other useful stuff. You could adapt this to X11 with xdotool.
 - *java*: I'm using `jdk21-openjdk` because I'm on CachyOS, just grab whatever allows you to compile and run java.
-- *zsh*: The shell script was written for Zsh, but I'm sure it's easily adapted to Bash.
+- *fish*: The shell script was written for fish, but I'm sure it's easily adapted to Bash or Zsh.
 
 ## Usage:
 
